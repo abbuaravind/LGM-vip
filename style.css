@@ -1,85 +1,141 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline: 0;
-    transition: all 0.5s ease;
-}
-body {
-    font-family: sans-serif;
-}
-a {
-    text-decoration: none;
-    color: #fff;
-}
-body {
-    background-image: linear-gradient(to bottom right, rgb(48, 213, 84), rgba(13, 150, 224, 0.126));
-}
-.container {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    place-items: center;
-}
-.calculator {
-    position: relative;
-    height: auto;
-    width: auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgb(102, 224, 102);
-}
-#display {
-    margin: 0 10px;
-    height: 120px;
-    width: auto;
-    max-width: 270px;
+  }
+  body {
+    background-image: linear-gradient(120deg, #858582fb 0%, #0c0b0b 100%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+  }
+  header {
+    font-size: 2rem;
+    color:#7260ef;
+    font-style: sans-serif;
+  }
+  
+  header,
+  form {
+    min-height: 20vh;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    font-size: 35px;
-    margin-bottom: 20px;
-    overflow-x: scroll;
-}
-#display::-webkit-scrollbar {
-    display: block;
-    height: 3px;
-}
-button {
-    height: 60px;
-    width: 60px;
-    border: 0;
-    border-radius: 30px;
-    margin: 5px;
-    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  form input,
+  form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+  }
+  form button {
+    color: #7260ef;
+    background: #f7fffe;
     cursor: pointer;
-    transition: all 200ms ease;
-}
-button:hover {
-    transform: scale(1.1);
-}
-button#equal {
-    height: 130px;
-}
-.calculator {
-    background-color: #03903bd7;
-}
-.calculator #display {
-    color: #f8fafb;
-}
-.calculator button#clear {
-    background-color: #2e1f39;
-    color: #f8fafb;
-}
-.calculator button.btn-number {
-    background-color: #447189;
-    color: #fbfaf8;
-}
-.calculator button.btn-operator {
-    background-color: #2e1f39;
-    color: #90f0eb;
-}
-.calculator button.btn-equal {
-    background-color: #223323;
-    color: #ffffff;
-}
+    transition: all 0.3s ease;
+  }
+  form button:hover {
+    background: #7260ef;
+    color: white;
+  }
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .todo-list {
+    min-width: 30%;
+    list-style: none;
+  }
+  
+  .todo {
+    margin: 0.5rem;
+    background: white;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+  }
+  .filter-todo {
+    padding: 1rem;
+  }
+  .todo li {
+    flex: 1;
+  }
+  
+  .trash-btn,
+  .complete-btn {
+    background: #7260ef;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .complete-btn {
+    background: rgb(11, 212, 162);
+  }
+  .todo-item {
+    padding: 0rem 0.5rem;
+  }
+  
+  .fa-trash,
+  .fa-check {
+    pointer-events: none;
+  }
+  
+  .fall {
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  /*CUSTOM SELECTOR */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+  }
+  
+  /* Custom Select */
+  .select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  select {
+    color: #7260ef;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+  }
+  /* Arrow */
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background: #7260ef;
+    cursor: pointer;
+    pointer-events: none;
+  }
+  /* Transition */
+  /*
+  .select:hover::after {
+    transform: scale(1.5);
+  }
+  */
